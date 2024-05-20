@@ -27,6 +27,22 @@ Enfin, installez les dépendances :
 
     pip install -r requirements.txt
 
+* Il est important de noter qu'un certains nombre de dépendances relatives au paquets cités dans le requirements seront installés automatiquement au cours de cette manipulation.
+
+
+Une fois ces installation effectuées avec succès, ouvrez une console python et tapez la commande suivante pour exécuter le script: 
+    
+    python programme_extraction_prix.py
+
+    
+
+* Il est important de noter que les paquets suivants sont nécessaires pour le bon fonctionnement de ce script : 
+    - Python 3.x
+    - BeautifulSoup4
+    - requests
+    - csv
+
+
 ## Description des sources et méthodes utilisées pour collecter et générer les données :
 
 Le script extrait les données des livres listés sur le site "books.toscrape.com". Il parcourt les différentes catégories de livres, récupère les URLs des pages de chaque livre, et collecte des informations telles que le titre, le prix, la disponibilité, la description, la catégorie, l'évaluation et l'image associée.
@@ -45,7 +61,7 @@ Le script extrait les données des livres listés sur le site "books.toscrape.co
 
 ## Procédures d’assurance qualité appliquées sur les données :
 
-Les URLs collectées sont contrôlées pendant la collecte de données. Les téléchargements, ainsi que les réponses HTTP sont vérifiés, de sorte à assurer la validité des données sauvegardées. Les caractères spéciaux ont été pris en compte et modifiés, pour éviter qu'ils ne générent des conflits dans la nomination des fichiers images notamment. Tout problème est signalé dans la console lors de l'exécution.
+Les téléchargements, ainsi que les réponses HTTP sont vérifiés, de sorte à assurer la validité des données sauvegardées. Les caractères spéciaux ont été pris en compte et modifiés, pour éviter qu'ils ne générent des conflits dans la nomination des fichiers images notamment. Tout problème est signalé dans la console lors de l'exécution.
 
 
 # APERCU DES DONNEES ET FICHIERS
@@ -66,7 +82,7 @@ Books_to_Scrape_Datas/
         <catégorie>_img/
             <titre_du_livre>.jpg
 
-# INFORMATIONS SPECIFIQUES AUX DONNEES POUR : [NOM DU FICHIER]
+# INFORMATIONS SPECIFIQUES AUX DONNEES POUR : [programme_extraction_prix]
 
 
 ## Liste des variables/en-têtes de colonne :
@@ -97,9 +113,4 @@ Books_to_Scrape_Datas/
 
 Il s'agit d'un script conçu et adapté à l'architecture du site "books.toscrape.com". Si celle-ci venait à changer, le script pourrait rencontrer des dysfonctionnements. 
 
-Il est important de noter que les paquets suivants sont nécessaires pour le bon fonctionnement de ce script : 
-    - Python 3.x
-    - BeautifulSoup4
-    - requests
-    - csv
 
